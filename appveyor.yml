@@ -12,3 +12,15 @@ build: false  # будем использовать свой скрипт сбо
 build_script:
   - ./gradlew test --info  # запускаем тест, флаг --info позволяет выводить больше информации
   - index --chmod +x ./gradlew
+
+notifications:
+  - provider: Email
+    # Список адресов
+    to:
+      - zybu@live.ru
+    # Отправлять ли письмо в случае успеха?
+    on_build_success: false
+    # Отправлять ли письмо в случае провала?
+    on_build_failure: true
+    # Отправлять ли письмо когда статус изменился?
+    on_build_status_changed: true
