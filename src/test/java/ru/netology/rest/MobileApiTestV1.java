@@ -3,8 +3,7 @@ package ru.netology.rest;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.hasSize;
+
 
 public class MobileApiTestV1 {
     @Test
@@ -20,7 +19,8 @@ public class MobileApiTestV1 {
                 // Проверки
                 .then()
                 .statusCode(200)
-                .header("Content-Type", "application/json; charset=utf-8");
+                .header("Content-Type", "application/json; charset=utf-8")
+                .header("Connection", "keep-alive");
 
     }
 }
