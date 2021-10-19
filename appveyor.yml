@@ -11,3 +11,4 @@ build: false  # будем использовать свой скрипт сбо
 
 build_script:
   - ./gradlew test --info  # запускаем тест, флаг --info позволяет выводить больше информации
+  - index --chmod +x ./gradlew
