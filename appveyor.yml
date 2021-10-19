@@ -9,8 +9,10 @@ branches:
 
 build: false  # будем использовать свой скрипт сборки
 
+permissions:
+  - ./gradlew
+
 build_script:
-  - index --chmod +x ./gradlew
     - ./gradlew test --info  # запускаем тест, флаг --info позволяет выводить больше информации
 
 notifications:
