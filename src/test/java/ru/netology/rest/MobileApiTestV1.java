@@ -20,7 +20,7 @@ public class MobileApiTestV1 {
                 .then()
                 .statusCode(200)
                 .header("Content-Type", "application/json; charset=utf-8")
-                .header("Connection", "keep-alive111");
+                .header("Connection", "keep-alive");
 
     }
 }
